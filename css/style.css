@@ -1,6 +1,5 @@
 :root {
     --bg-base: #ecfdf5;
-    /* Very soft mint */
     --primary-green: #064e3b;
     --sage-green: #1b4332;
     --accent-green: #34d399;
@@ -25,7 +24,6 @@ body {
     perspective: 1500px;
 }
 
-/* --- Animated Mesh Background --- */
 .mesh-bg {
     position: fixed;
     top: 0;
@@ -80,7 +78,6 @@ body {
     }
 }
 
-/* --- Pulsing Heart Silhouette --- */
 .heartbeat-backdrop {
     position: fixed;
     top: 50%;
@@ -128,7 +125,6 @@ body {
     }
 }
 
-/* --- Interactive Love Card --- */
 .card-container {
     position: relative;
     z-index: 10;
@@ -136,10 +132,10 @@ body {
     max-width: 800px;
     cursor: pointer;
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 1s ease-in-out;
-    opacity: 0; /* Hidden initially for JS reveal */
+    opacity: 0;
+    /* Hidden initially for JS reveal */
 }
 
-/* Reveal State */
 .card-container.reveal {
     opacity: 1;
 }
@@ -182,7 +178,6 @@ h1 {
     text-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* --- Hidden Message Reveal --- */
 .secret-message {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
@@ -199,7 +194,6 @@ h1 {
     margin-top: 1rem;
 }
 
-/* --- Falling Petals --- */
 .petal {
     position: absolute;
     width: 18px;
@@ -219,8 +213,6 @@ h1 {
     background: #fecaca;
     opacity: 0.5;
 }
-
-/* Soft romantic pink accent */
 
 @keyframes falling {
     0% {
@@ -246,12 +238,10 @@ h1 {
     }
 }
 
-/* Swaying effect for more natural fall */
 .petal {
     animation: falling linear infinite;
 }
 
-/* --- Realistic Fireflies --- */
 .firefly {
     position: absolute;
     width: 3px;
@@ -275,7 +265,6 @@ h1 {
     }
 }
 
-/* --- Flying Birds --- */
 .bird {
     position: absolute;
     z-index: 12;
@@ -287,31 +276,62 @@ h1 {
     height: 40px;
     fill: #065f46;
     opacity: 0.8;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
 }
 
-.bird-1 { animation: flyBird1 18s infinite linear; }
-.bird-2 { animation: flyBird2 22s infinite linear; animation-delay: 5s; }
+.bird-1 {
+    animation: flyBird1 18s infinite linear;
+}
+
+.bird-2 {
+    animation: flyBird2 22s infinite linear;
+    animation-delay: 5s;
+}
 
 @keyframes flyBird1 {
-    0% { transform: translate(-100px, 20vh) scaleX(1); }
-    49% { transform: translate(110vw, 40vh) scaleX(1); }
-    50% { transform: translate(110vw, 40vh) scaleX(-1); }
-    99% { transform: translate(-100px, 60vh) scaleX(-1); }
-    100% { transform: translate(-100px, 60vh) scaleX(1); }
+    0% {
+        transform: translate(-100px, 20vh) scaleX(1);
+    }
+
+    49% {
+        transform: translate(110vw, 40vh) scaleX(1);
+    }
+
+    50% {
+        transform: translate(110vw, 40vh) scaleX(-1);
+    }
+
+    99% {
+        transform: translate(-100px, 60vh) scaleX(-1);
+    }
+
+    100% {
+        transform: translate(-100px, 60vh) scaleX(1);
+    }
 }
 
 @keyframes flyBird2 {
-    0% { transform: translate(110vw, 70vh) scaleX(-1); }
-    49% { transform: translate(-100px, 30vh) scaleX(-1); }
-    50% { transform: translate(-100px, 30vh) scaleX(1); }
-    99% { transform: translate(110vw, 10vh) scaleX(1); }
-    100% { transform: translate(110vw, 10vh) scaleX(-1); }
+    0% {
+        transform: translate(110vw, 70vh) scaleX(-1);
+    }
+
+    49% {
+        transform: translate(-100px, 30vh) scaleX(-1);
+    }
+
+    50% {
+        transform: translate(-100px, 30vh) scaleX(1);
+    }
+
+    99% {
+        transform: translate(110vw, 10vh) scaleX(1);
+    }
+
+    100% {
+        transform: translate(110vw, 10vh) scaleX(-1);
+    }
 }
 
-/* --- Optimized Responsive Logic for 1612x720 (Portrait & Landscape) --- */
-
-/* General Portrait (High Aspect Ratio) */
 @media (max-aspect-ratio: 1/1) {
     body {
         padding: 5%;
@@ -329,7 +349,6 @@ h1 {
     }
 }
 
-/* Landscape Mode Fix (Phone Horizontal 1612x720) */
 @media (max-height: 500px) {
     body {
         overflow-y: auto;
@@ -355,18 +374,14 @@ h1 {
     .butterfly {
         display: none;
     }
-
-    /* Hide to clear space */
 }
 
-/* Specific support for modern tall phones */
 @media (min-aspect-ratio: 2/1) {
     .card {
         max-width: 600px;
     }
 }
 
-/* --- SVGs --- */
 .rose {
     position: absolute;
     width: 250px;
