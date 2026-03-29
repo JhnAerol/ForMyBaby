@@ -387,6 +387,17 @@ h1 {
     animation: flapL 0.35s infinite ease-in-out alternate;
 }
 
+.butterfly-body-svg {
+    position: absolute;
+    width: 30px;
+    height: 95px;
+    left: 45px;
+    top: -8px;
+    z-index: 5;
+    pointer-events: none;
+    filter: drop-shadow(0 2px 4px rgba(6, 78, 59, 0.3));
+}
+
 @keyframes flapL {
     0% {
         transform: rotateY(0deg) scaleY(1);
